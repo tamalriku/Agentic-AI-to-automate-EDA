@@ -16,9 +16,9 @@ A highly robust, multi-agent artificial intelligence pipeline that automates Exp
 
 ### 📸 App Preview
 
-![Agentic EDA UI Preview](assets/ui_preview.png)
-
 ![Final Data Analysis Report Preview](assets/report_preview.png)
+
+![Agentic EDA UI Preview](assets/ui_preview.png)
 
 ---
 
