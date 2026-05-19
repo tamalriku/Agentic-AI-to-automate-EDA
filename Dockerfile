@@ -11,8 +11,11 @@ ENV PYTHONUNBUFFERED=1
 # Copy the requirements file first to leverage Docker cache
 COPY requirements.txt .
 
-# Install the Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# 1. Upgrade pip first for better network and dependency handling
+RUN pip install --no-cache-dir --upgrade pip
+
+# 2. Add extreme timeouts (1000s) and 10 retries to survive network drops
+RUN pip install --no-cache-dir --default-timeout=1000 --retries=10 -r requirements.txt
 
 # Copy the rest of the application code into the container
 COPY . .
